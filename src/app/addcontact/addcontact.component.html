@@ -1,0 +1,91 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <h1>
+        Add a New Contact
+      </h1>
+      <hr/>
+    </div>
+
+    <div class="col-xs-12 m">
+      <figure>
+        <img src="../../assets/images/r3.png">
+      </figure>
+      <p>
+        <strong>
+          <a class="btn">Add Photo</a>
+        </strong>
+      </p>
+    </div>
+  </div>
+  <br/>
+  <div class="row">
+    <div class="col-xs-2 s">
+      <span class="txtstyle" for="#fn">
+        First name
+      </span>
+    </div>
+    <div class="col-xs-9 ss">
+      <input type="text" name="firtname" class="txtbox" id="fn" [(ngModel)]="firstname" />
+    </div>
+
+  </div>
+  <hr/>
+  <br/>
+  <br/>
+  <div class="row">
+    <div class="col-xs-2">
+      <span class="txtstyle" for="#fn">
+        Last name
+      </span>
+    </div>
+    <div class="col-xs-9">
+      <input type="text" name="lastname" class="txtbox" id="fn" [(ngModel)]="lastname">
+    </div>
+
+  </div>
+  <hr/>
+  <br/>
+  <br/>
+  <div class="row">
+    <div class="col-xs-2">
+      <span class="txtstyle" For="#fn">
+        <input type="number" name="number" placeholder="+44" class="num" id="fn">
+        <hr/>
+      </span>
+    </div>
+    <div class="col-xs-9">
+      <input type="number" name="phone" class="txtbox" id="fn" [(ngModel)]="phone">
+      <hr class="h" />
+    </div>
+
+  </div>
+  <br/>
+  <br/>
+  <div class="row">
+    <div class="col-xs-2">
+      <span class="txtstyle" for="#fn">
+        Email
+      </span>
+    </div>
+    <div class="col-xs-9">
+      <input type="email" name="email" class="txtbox" id="fn">
+    </div>
+
+  </div>
+  <hr/>
+  <br>
+  <br/>
+  
+  <div class="row ">
+      <div class="d">
+      <a routerLink="" class="btn btn-medium btn-block btn-primary b" (click)="add()">Add Contact</a>
+      <br/>
+      <a routerLink="" class="btn btn-large btn-block btn-success b">Cancel</a> 
+    </div>
+      
+</div>
+<br>
+<br><br>
+<br><br>
+<br>

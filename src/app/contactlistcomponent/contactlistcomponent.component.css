@@ -1,0 +1,48 @@
+#container{
+
+    width:75%;
+    margin:3% auto;
+ 
+
+}
+
+div.addcontact{
+background-color:lavender;
+    width:100%;
+    font-style: normal;
+    font-weight: bold;
+    text-decoration: inherit;
+    font-size: 130%;
+}
+
+#contacttitle{
+
+    padding:0 2%;
+    color: gray;
+    
+}
+#latestcontacts{
+    padding:0 2%;
+   font-size: 85%;
+}
+#addbtn,.char{
+    float: right;
+    padding:0 3%;
+    color: gray;
+}
+.char{
+    font-size: 60%;
+    padding-top:1%;
+    
+}
+hr{
+    width:100%;
+    margin-bottom: 0%;
+}
+.clear{
+    clear: both;
+}
+.x{
+    float: left;
+    width:92%;
+}
