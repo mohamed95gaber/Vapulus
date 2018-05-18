@@ -1,5 +1,6 @@
 <div id="container">
-    <app-searchcomponent></app-searchcomponent>
+
+    <app-searchcomponent (search)="onSearch($event)"></app-searchcomponent>
     <div class="addcontact">
         <span id="contacttitle">
             add New Contacts
@@ -12,195 +13,360 @@
         <hr/>
     </div>
 
+    <div class="chr">
+            <span class="ch">
+                <a href="#a"> A </a>
+            </span>
+            <span class="ch">
+                <a href="#b"> B </a>
+            </span>
+            <span class="ch">
+                <a href="#c"> C </a>
+            </span>
+    
+            <span class="ch">
+                <a href="#d"> D</a>
+            </span>
+            <span class="ch">
+                <a href="#e"> E </a>
+            </span>
+            <span class="ch">
+                <a href="#f"> F </a>
+            </span>
+            <span class="ch">
+                <a href="#g"> G </a>
+            </span>
+            <span class="ch">
+                <a href="#h"> H </a>
+            </span>
+            <span class="ch">
+                <a href="#i"> I </a>
+            </span>
+            <span class="ch">
+                <a href="#j"> J </a>
+            </span>
+            <span class="ch">
+                <a href="#k"> K </a>
+            </span>
+            <span class="ch">
+                <a href="#l"> L </a>
+            </span>
+            <span class="ch">
+                <a href="#m"> M </a>
+            </span>
+            <span class="ch">
+                <a href="#n"> N </a>
+            </span>
+            <span class="ch">
+                <a href="#o"> O </a>
+            </span>
+            <span class="ch">
+                <a href="#p"> P </a>
+            </span>
+            <span class="ch">
+                <a href="#q"> Q </a>
+            </span>
+            <span class="ch">
+                <a href="#r"> R </a>
+            </span>
+            <span class="ch">
+                <a href="#s"> S </a>
+            </span>
+            <span class="ch">
+                <a href="#t"> T </a>
+            </span>
+            <span class="ch">
+                <a href="#u"> U </a>
+            </span>
+            <span class="ch">
+                <a href="#v"> V </a>
+            </span>
+            <span class="ch">
+                <a href="#w"> W </a>
+            </span>
+            <span class="ch">
+                <a href="#x"> X </a>
+            </span>
+            <span class="ch">
+                <a href="#y"> Y </a>
+            </span>
+            <span class="ch">
+                <a href="#z"> Z </a>
+            </span>
+        </div>
     <div class="addcontact">
         <span id="latestcontacts">
             Latest Contacts
         </span>
     </div>
     <ul class="list-group" id="contact-list">
-
         <app-contactitem [contact]="item" *ngFor="let item of recentContacts"></app-contactitem>
-
     </ul>
- 
-    <div class="addcontact">
-        <span id="latestcontacts">
-            <a id="a"> A </a>
-        </span>
-        <span class="char">
-            <a href="#a"> A </a>
-        </span>
-    </div>
-    <p class="clear"></p>
-    <ul class="list-group x" id="contact-list">     
- <app-contactitem [contact]="item" *ngFor="let item of aContacts"></app-contactitem>
-</ul>
-    <div class="addcontact">
-        <span class="char">
-            <a href="#b"> B </a>
-        </span>
-    </div>
-   
-    <div class="addcontact">
-        <span class="char">
-            <a href="#c"> C </a>
-        </span>
-    </div>
-  
-    <div class="addcontact">
-        <span class="char">
-            <a href="#d"> D</a>
-        </span>
-    </div>
+    <ul class="list-group" id="contact-list">
+            <app-contactitem [contact]="item" *ngFor="let item of searchContacts"></app-contactitem>
+   </ul>
+   <h3 *ngIf="message" class="center">There is no result</h3>
+    <div class="row">
+        <div class="col-xs-12">
+            <div *ngIf="aContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="a"> A </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of aContacts"></app-contactitem>
+            </ul>
 
-    <div class="addcontact">
-        <span class="char">
-            <a href="#e"> E </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#f"> F </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#g"> G </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#h"> H </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#i"> I </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#j"> J </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#k"> K </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#l"> L </a>
-        </span>
-    </div>
-    <div class="addcontact">
-        <span class="char">
-            <a href="#m"> M </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-       
-        <span class="char">
-            <a href="#n"> N </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#o"> O </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#p"> P </a>
-        </span>
-    </div>
- 
-    <div class="addcontact">
-        <span class="char">
-            <a href="#q"> Q </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#r"> R </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#s"> S </a>
-        </span>
-    </div>
-  
-    <p class="clear"></p>
-    <div class="addcontact">
-            <span id="latestcontacts">
+            <p class="clear"></p>
+            <div *ngIf="bContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
                     <a id="b"> B </a>
                 </span>
-        <span class="char">
-            <a href="#t"> T </a>
-        </span>
-    </div>
-    <ul class="list-group x" id="contact-list">     
-            <app-contactitem [contact]="item" *ngFor="let item of bContacts"></app-contactitem>
-           </ul>
-    <div class="addcontact">
-        <span class="char">
-            <a href="#u"> U </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#v"> V </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#w"> W </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#x"> X </a>
-        </span>
-    </div>
-
-    <div class="addcontact">
-        <span class="char">
-            <a href="#y"> Y </a>
-        </span>
-    </div>
-  
-    <div class="addcontact">
-        <span class="char">
-            <a href="#z"> Z </a>
-        </span>
-    </div>
-    <p class="clear"></p>    
-    <div class="addcontact">
-            <span id="latestcontacts">
-                <a id="c"> C </a>
-            </span>
             </div>
-    <p class="clear"></p>
-    <ul class="list-group x" id="contact-list">     
-            <app-contactitem [contact]="item" *ngFor="let item of cContacts"></app-contactitem>
-           </ul>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of bContacts"></app-contactitem>
+            </ul>
 
+            <p class="clear"></p>
+            <div *ngIf="cContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="c"> C </a>
+                </span>
+            </div>
+            <ul class="list-group " id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of cContacts"></app-contactitem>
+            </ul>
 
+            <p class="clear"></p>
+            <div *ngIf="dContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="d"> D</a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of dContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="eContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="e"> E </a>
+                </span>
+            </div>
+            <ul class="list-group " id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of eContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="fContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="f"> F </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of fContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="gContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="g"> G </a>
+                </span>
+            </div>
+            <ul class="list-group " id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of gContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="hContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="h"> H </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of hContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="iContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="i"> I </a>
+                </span>
+            </div>
+            <ul class="list-group " id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of iContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="jContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="j"> J </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of jContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="kContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="k"> K </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of kContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="lContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="l"> L </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of lContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="mContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="m"> M </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of mContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="nContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="n"> N </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of nContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="oContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="o"> O </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of oContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="pContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="p"> P </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of pContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="qContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="q"> Q </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of qContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="rContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="r"> R </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of rContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="sContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="s"> S </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of sContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="tContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="t"> T </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of tContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="uContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="u"> U </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of uContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="vContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="v"> V </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of vContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="wContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="w"> W </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of wContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="xContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="x"> X </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of xContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="yContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="y"> Y </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of yContacts"></app-contactitem>
+            </ul>
+
+            <p class="clear"></p>
+            <div *ngIf="zContacts.length > 0" class="addcontact">
+                <span id="latestcontacts">
+                    <a id="z"> Z </a>
+                </span>
+            </div>
+            <ul class="list-group" id="contact-list">
+                <app-contactitem [contact]="item" *ngFor="let item of zContacts"></app-contactitem>
+            </ul>
+        </div>
+
+    </div>
 </div>
-

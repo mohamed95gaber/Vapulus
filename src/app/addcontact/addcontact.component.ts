@@ -27,7 +27,6 @@ add(){
     imgUrl:this.img,
     phone:this.phone
   }
-  this.contactItems.recentcontacts.push(this.newcontact);
-
+  this.contactItems.contacts.push(this.newcontact);
 }
 }

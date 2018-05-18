@@ -2,7 +2,6 @@
 
     width:75%;
     margin:3% auto;
- 
 
 }
 
@@ -25,16 +24,12 @@ background-color:lavender;
     padding:0 2%;
    font-size: 85%;
 }
-#addbtn,.char{
+#addbtn{
     float: right;
     padding:0 3%;
     color: gray;
 }
-.char{
-    font-size: 60%;
-    padding-top:1%;
-    
-}
+
 hr{
     width:100%;
     margin-bottom: 0%;
@@ -45,4 +40,23 @@ hr{
 .x{
     float: left;
     width:92%;
+}
+
+.characters{
+    float: right;   
+    position: fixed;
+}
+
+.ch{
+    
+    display: block;
+    font-size: 85%;
+}
+.chr{
+    position: fixed;  
+    padding-left: 74%;
+    z-index: 1;
+}
+.center{
+    text-align: center;
 }

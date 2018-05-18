@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit,Output,EventEmitter} from '@angular/core';
 import { IContact } from '../interfaces/IContact';
+
 
 @Component({
   selector: 'app-searchcomponent',
@@ -7,11 +8,13 @@ import { IContact } from '../interfaces/IContact';
   styleUrls: ['./searchcomponent.component.css']
 })
 export class SearchcomponentComponent implements OnInit {
-searchtxt:string;
-  constructor() { }
+searchTxt:string="";
+@Output() search=new EventEmitter<string>();
 
   ngOnInit() {
   }
  Search(){
+console.log(this.searchTxt);
+ this.search.emit(this.searchTxt)
  }
 }
